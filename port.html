@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    .social-icons a {
+      font-size: 24px; 
+      margin: 0 10px;
+      color: #555; 
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      color: rgb(0, 89, 255); 
+    }
+    .resume-btn {
+      background-color: skyblue;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      font-size: 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px; 
+    }
+    .resume-btn:hover {
+      background-color: deepskyblue;
+    }
+    .portfolio-heading {
+      color: rgb(0, 89, 255);
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+    .portfolio-text {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .main-heading {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: rgb(0, 89, 255);
+      text-align: center;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    .github-icon {
+      font-size: 2rem;
+      margin-left: 15px;
+      color: black;
+      text-decoration: none;
+    }
+    .github-icon:hover {
+      color: rgb(0, 89, 255);
+    }
+
+    
+    .expertise-section,
+    .comfortable-section,
+    .familiar-section,
+    .tools-section {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .section-heading {
+      font-size: 2rem;
+      font-weight: bold;
+      color: rgb(0, 89, 255);
+      margin-bottom: 20px;
+    }
+    .buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 75%; 
+      margin-right: 25%; 
+    }
+    .section-btn {
+      margin: 5px;
+      font-size: 14px; 
+      padding: 8px 16px; 
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .section-btn:hover {
+      background-color: #0056b3;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-form button {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+      </a>
+      <!-- Toggle Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="resume.pdf" class="resume-btn" download>
+              Resume
+              <i class="bi bi-download"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Introduction Section -->
+  <div class="container pt-5">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <h1 style="color: rgb(0, 89, 255);">HI!</h1>
+        <h1 style="color: rgb(0, 89, 255);">I'M GIAS UDDIN</h1>
+        <h6>Web Developer || React Developer || Programmer</h6>
+        <br>
+        <p>
+          I am an enthusiastic Javascript developer with knowledge of some frameworks for the frontend
+          and backend. I know Basic PHP and MySQL but am basically a MERN developer.
+        </p>
+        <!-- Social Media Icons -->
+        <div class="d-flex align-items-center mt-3">
+          <div class="social-icons me-3">
+            <a href="https://github.com/" target="_blank" class="bi bi-github"></a>
+            <a href="https://linkedin.com/" target="_blank" class="bi bi-linkedin"></a>
+            <a href="https://youtube.com/" target="_blank" class="bi bi-youtube"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="gias.jpg" alt="Profile Image" class="img-fluid rounded" style="width: 80%;">
+      </div>
+    </div>
+  </div>
+
+   <!-- Portfolio Section -->
+   <div class="container pt-5">
+    <h1 class="portfolio-heading">Portfolio</h1>
+    <div class="row">
+      <!-- Image Slider -->
+      <div class="col-md-6">
+        <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Travel-Search.png" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="travel-guru-map.png" class="d-block w-100" alt="Image 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- Text Content -->
+      <div class="col-md-6 d-flex align-items-center">
+        <div>
+          <!-- Title and GitHub Icon -->
+          <!-- Title and GitHub Icon -->
+<div class="d-flex align-items-center mb-3">
+  <h3 class="mb-0 me-2">Online University</h3>
+  <a href="https://github.com/your-username" target="_blank" class="github-icon">
+    <i class="bi bi-github"></i>
+  </a>
+</div>
+
+          <p class="portfolio-text">
+            This is a Travel Service Agency website. Users can log in via Facebook, Google, or create a new account to use the services. Users can choose the services they want.
+          </p>
+          <ul>
+            <li>Users can choose the perfect vehicle as they want.</li>
+            <li>Users can also see their current location.</li>
+            <li>Firebase Authentication is used in this website.</li>
+            <li>Users can log in via Google, Facebook, GitHub, or create an account.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Portfolio Section -->
+    <div class="row mt-5">
+      <!-- Image Slider -->
+      <div class="col-md-6">
+        <div id="portfolioCarousel2" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Travel-Search.png" class="d-block w-100" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+              <img src="travel-guru-map.png" class="d-block w-100" alt="Image 4">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- Text Content -->
+      <div class="col-md-6 d-flex align-items-center">
+        <div>
+          <!-- Title and GitHub Icon -->
+          <!-- Title and GitHub Icon -->
+<div class="d-flex align-items-center mb-3">
+  <h3 class="mb-0 me-2">Online University</h3>
+  <a href="https://github.com/your-username" target="_blank" class="github-icon">
+    <i class="bi bi-github"></i>
+  </a>
+</div>
+
+          <p class="portfolio-text">
+            This is a Travel Service Agency website. Users can log in via Facebook, Google, or create a new account to use the services. Users can choose the services they want.
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Expertise Section -->
+   <div class="container expertise-section">
+    <h2 class="section-heading">Expertise:</h2>
+    <div class="buttons-container">
+      <button class="section-btn">React.js</button>
+      <button class="section-btn">JavaScript</button>
+      <button class="section-btn">Node.js</button>
+      <button class="section-btn">Express.js</button>
+      <button class="section-btn">Firebase</button>
+      <button class="section-btn">HTML</button>
+      <button class="section-btn">Bootstrap</button>
+      <button class="section-btn">MongoDB</button>
+    </div>
+  </div>
+
+  <!-- Comfortable Section -->
+  <div class="container comfortable-section">
+    <div class="row">
+      <!--  Comfortable Buttons -->
+      <div class="col-md-8">
+        <h2 class="section-heading">Comfortable:</h2>
+        <div class="buttons-container">
+          <button class="section-btn">SQL</button>
+          <button class="section-btn">Redux</button>
+          <button class="section-btn">Socket.io</button>
+          <button class="section-btn">AWS</button>
+          <button class="section-btn">Docker</button>
+          <button class="section-btn">TypeScript</button>
+          <button class="section-btn">Next.js</button>
+        </div>
+      </div>
+      <!--  Education Info -->
+      <div class="col-md-4">
+        <h2 class="section-heading">My Education</h2>
+        <p>BSc. in Software Engineering,<br> Yunnan University (Kunming, Yunnan, China) <br>2018-2022</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Familiar Section -->
+  <div class="container familiar-section">
+    <h2 class="section-heading">Familiar:</h2>
+    <div class="buttons-container">
+      <button class="section-btn">C++</button>
+      <button class="section-btn">python</button>
+      <button class="section-btn">Spring Boot</button>
+      <button class="section-btn">Networking</button>
+    </div>
+  </div>
+
+  <!-- Tools Section -->
+  <div class="container tools-section">
+    <h2 class="section-heading">Tools:</h2>
+    <div class="buttons-container">
+      <button class="section-btn">VS Code</button>
+      <button class="section-btn">Git</button>
+      <button class="section-btn">JIRA</button>
+      <button class="section-btn">Trello</button>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <h2 style="text-align: center;"class="section-heading">Contact With Me</h2>
+    <div class="contact-form mt-4">
+      <form action="#" method="post">
+        <div class="mb-3">
+        
+          <input type="text" class="form-control" id="name" name="name" placeholder="please type your name" required>
+        </div>
+        <div class="mb-3">
+         
+          <input type="email" class="form-control" id="email" name="email" placeholder="please type your email" required>
+        </div>
+        <div class="mb-3">
+        
+          <textarea class="form-control" id="message" name="message" rows="5" placeholder="type here message" required></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+<footer class="bg-light py-4 mt-5">
+  <div class="container text-center">
+    <p>&copy; Copyright 2021 | Gias Uddin <br> Kunming, Yunnan, China</p>
+    <!-- Social Media Icons -->
+    <div class="social-icons mt-3">
+      <a href="https://github.com/your-github-profile" target="_blank" title="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" title="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://youtube.com/your-youtube-channel" target="_blank" title="YouTube">
+        <i class="bi bi-youtube"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
